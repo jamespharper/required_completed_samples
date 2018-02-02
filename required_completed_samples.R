@@ -11,9 +11,9 @@ p = 0.5       # expected sample heterogeneity
 moe = 0.05    # acceptable sampling error or margin of error
 N = 1000      # population size, if available/desired
               # (important when population < 20,000)
-q = 1         # ???
 
 # Calculate required completed sample to based on above requirements
 n = data.frame(Unknown.Population.Size = z^2*p*(1 - p)/moe^2,
-               Known.Population.Size = N*p*(1 - p)/((N - 1)*(moe/z)^2 + (p*q)))
+               Known.Population.Size = 
+                 N*p*(1 - p)/((N - 1)*(moe/z)^2 + (p*(1 - p))))
 round(n, 0)
